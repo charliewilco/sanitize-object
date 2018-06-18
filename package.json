@@ -1,11 +1,13 @@
 {
-  "name": "santize-object",
+  "name": "@charliewilco/santize-object",
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
+    "precommit": "lint-staged",
     "build": "babel src -d dist",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "yarn test && yarn build"
   },
   "peerDependencies": {
     "object-assign": "^4.1.1"
@@ -14,9 +16,24 @@
     "babel-cli": "^6.26.0",
     "babel-preset-flow": "^6.23.0",
     "jest": "^23.1.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.5",
     "prettier": "^1.13.5"
   },
   "babel": {
     "presets": ["flow"]
+  },
+  "lint-staged": {
+    "*.js": ["prettier --parser flow --write", "git add"],
+    "*.json": ["prettier --parser json --write", "git add"]
+  },
+  "prettier": {
+    "printWidth": 85,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "useTabs": false,
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true
   }
 }
