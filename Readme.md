@@ -8,15 +8,17 @@ When you need a cloned object without the stowaways.
 yarn add @charliewilco/sanitize-object
 ```
 
-
 ## Example
 
 ```js
 const sanitize = require('@charliewilco/sanitize-object')
 
-const cloned = sanitize({ dateAdded: '2017-11-21T15:57:28.109Z', title: 'Some Entry' }, ['dateAdded'])
+const cloned = sanitize(
+  { dateAdded: '2017-11-21T15:57:28.109Z', title: 'Some Entry' },
+  ['dateAdded']
+)
 
 console.log(cloned)
 
-// Result: { title: 'Some Entry' } 
+// Result: { title: 'Some Entry' }
 ```
