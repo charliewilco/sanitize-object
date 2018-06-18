@@ -15,8 +15,8 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-flow": "^6.23.0",
-    "jest": "^23.1.0",
     "husky": "^0.14.3",
+    "jest": "^23.1.0",
     "lint-staged": "^7.0.5",
     "prettier": "^1.13.5"
   },
@@ -35,5 +35,7 @@
     "useTabs": false,
     "bracketSpacing": true,
     "jsxBracketSameLine": true
-  }
+  },
+  "repository": "git@github.com:charliewilco/sanitize-object.git",
+  "author": "Charles ⚡ <charlespeters42@gmail.com>"
 }
