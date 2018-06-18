@@ -1,6 +1,6 @@
 {
   "name": "@charliewilco/sanitize-object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -36,6 +36,6 @@
     "bracketSpacing": true,
     "jsxBracketSameLine": true
   },
-  "repository": "git@github.com:charliewilco/sanitize-object.git",
+  "repository": "charliewilco/sanitize-object",
   "author": "Charles ⚡ <charlespeters42@gmail.com>"
 }
