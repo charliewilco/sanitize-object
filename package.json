@@ -1,31 +1,38 @@
 {
   "name": "@charliewilco/sanitize-object",
   "version": "1.0.1",
+  "repository": "charliewilco/sanitize-object",
+  "author": "Charles ⚡ <charlespeters42@gmail.com>",
   "main": "dist/index.js",
+  "typings": "index.d.ts",
   "license": "MIT",
   "scripts": {
-    "precommit": "lint-staged",
-    "build": "babel src -d dist",
+    "build": "tsc",
     "test": "jest",
     "prepublish": "yarn test && yarn build"
   },
-  "peerDependencies": {
-    "object-assign": "^4.1.1"
-  },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-flow": "^6.23.0",
+    "@types/jest": "^23.3.11",
     "husky": "^0.14.3",
     "jest": "^23.1.0",
     "lint-staged": "^7.0.5",
-    "prettier": "^1.13.5"
-  },
-  "babel": {
-    "presets": ["flow"]
+    "prettier": "^1.13.5",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2"
   },
   "lint-staged": {
-    "*.js": ["prettier --parser flow --write", "git add"],
-    "*.json": ["prettier --parser json --write", "git add"]
+    "*.{js,json,ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jest": {
+    "preset": "ts-jest"
   },
   "prettier": {
     "printWidth": 85,
@@ -35,7 +42,5 @@
     "useTabs": false,
     "bracketSpacing": true,
     "jsxBracketSameLine": true
-  },
-  "repository": "charliewilco/sanitize-object",
-  "author": "Charles ⚡ <charlespeters42@gmail.com>"
+  }
 }

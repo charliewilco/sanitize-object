@@ -1,4 +1,4 @@
-const sanitize = require('./src')
+import sanitize from './src';
 
 describe('Clean and retain object', () => {
   const myObject = {
