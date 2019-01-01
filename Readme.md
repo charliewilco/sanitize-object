@@ -1,5 +1,7 @@
 # Sanitize Object
 
+[![Build Status](https://travis-ci.com/charliewilco/sanitize-object.svg?branch=master)](https://travis-ci.com/charliewilco/sanitize-object)
+
 When you need a cloned object without the stowaways.
 
 ## Install
