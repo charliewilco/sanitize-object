@@ -1,6 +1,6 @@
 # Sanitize Object
 
-[![Build Status](https://travis-ci.com/charliewilco/sanitize-object.svg?branch=master)](https://travis-ci.com/charliewilco/sanitize-object)
+![Build Status](https://github.com/charliewilco/sanitize-object/workflows/nodejs/badge.svg)
 
 When you need a cloned object without the stowaways.
 
